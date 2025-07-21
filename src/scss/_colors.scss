@@ -1,0 +1,30 @@
+/*================================
+=            Colors            =
+================================*/
+
+$primary  : #830800cc;  // Colors
+$secondary: #888888;  // Text
+$third    : #eeeeee;  // Background
+$fourth   : #ffffff;
+$five     : #7a97ab;
+
+/*----------  Layout  ----------*/
+$layoutBackground : $third;
+
+/*----------  Blind Color  ----------*/
+$blindBackgroundBW: $third;
+$blindColorBW: $fourth;
+
+$blindBackgroundWB: $fourth;
+$blindColorWB: $third;
+
+$blindBackgroundCW: #0099CC;
+$blindColorCW: $third;
+
+$blindBackgroundYB: #FFCC33;
+$blindColorYB: $third;
+
+$error : $third;
+$success : $fourth;
+
+/*=====  End of Colors  ======*/

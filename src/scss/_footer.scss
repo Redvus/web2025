@@ -1,0 +1,87 @@
+.tab {
+
+    &__menu {
+        width: 100%;
+        //height: calc(#{$padding} * 2);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: $fourth;
+
+        &--page {
+            background-color: transparent;
+            z-index: 2;
+        }
+
+        &_item {
+            height: 100%;
+        }
+
+        &_trigger {
+            //display: flex;
+            //align-items: center;
+            //justify-content: center;
+            //padding: $padding calc(#{$padding} * 2);
+            //cursor: pointer;
+            //
+            //&.is-active{
+            //    background-color: $third;
+            //}
+            //
+            //&--page {
+            //
+            //    &.is-active{
+            //        background-color: $fourth;
+            //        border-top: $border_normal solid $secondary;
+            //        //border-bottom: $border_normal solid $fourth;
+            //        border-left: $border_normal solid $secondary;
+            //        border-right: $border_normal solid $secondary;
+            //        padding: calc(#{$padding} - #{$border_normal}) calc((#{$padding} * 2) - (#{$border_normal} * 2)) $padding;
+            //    }
+            //}
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: calc(#{$padding} * 2) 0 $padding;
+
+        &--page {
+            border-top: $border_normal solid $secondary;
+            margin-top: calc((-#{$border_normal}) + (#{$padding} * 0.03));
+            z-index: 1;
+        }
+    }
+
+    @include grid-media($XSmall) {
+
+        &__menu {
+            flex-direction: column;
+
+            &_item {
+                width: 100%;
+            }
+
+            &_trigger {
+
+                &--page {
+
+                    &.is-active{
+                        background-color: $secondary;
+                        color: $fourth;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        //&__content {
+        //
+        //
+        //	&--page {
+        //		border-top: none;
+        //	}
+        //}
+    }
+}

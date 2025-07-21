@@ -1,0 +1,22 @@
+{
+  "name": "smibs2025",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.0.5"
+  },
+  "dependencies": {
+    "bourbon": "^7.3.0",
+    "gsap": "^3.13.0",
+    "imagesloaded": "^5.0.0",
+    "locomotive-scroll": "^4.1.4",
+    "sag-bourbon-neat": "^2.1.1",
+    "sass": "^1.77.1"
+  }
+}

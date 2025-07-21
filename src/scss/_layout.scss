@@ -1,0 +1,17 @@
+.main-content {
+
+    &__top {
+        width: 100%;
+        min-height: 7vmax;
+        height: 7vmax;
+        margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        &__top {
+            height: inherit;
+        }
+    }
+}
+
+
