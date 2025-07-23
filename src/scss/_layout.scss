@@ -1,3 +1,45 @@
+@use 'breakpoints' as bp;
+@use "sass:color";
+@use 'fonts' as *;
+
+body {
+    @include px(base);
+    margin: 0;
+    background-color: var(--layoutBackground);
+
+    @include bp.media-up('Large') {
+        @include px(base);
+
+        i {
+            @include px(base);
+        }
+    }
+
+    @include bp.media-up('XLarge') {
+        @include px(large);
+
+        i {
+            @include px(large);
+        }
+    }
+}
+
+.wrapper {
+    width: calc(100% - (var(--header-height) * 3));
+    min-height: 100vh;
+    display: block;
+    padding: calc(var(--header-height) * 1.5);
+    overflow: hidden;
+
+    &__inside {
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        overflow: hidden;
+        // background-color: var(--fourth);
+    }
+}
+
 .main-content {
 
     &__top {
@@ -7,7 +49,7 @@
         margin-bottom: 2rem;
     }
 
-    @media screen and (max-width: 767px) {
+    @include bp.media-up('Medium') {
         &__top {
             height: inherit;
         }

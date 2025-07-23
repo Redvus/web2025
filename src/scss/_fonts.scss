@@ -1,68 +1,121 @@
+@use 'breakpoints' as bp;
+
 /*=============================
 =            Fonts            =
 =============================*/
+:root {
+	--primary-font      : Helvetica, sans-serif;
+	--heading-font      : 'Oswald', sans-serif;
+	--heading-font-light: 'Oswald', sans-serif;
 
-// @include font-face (
-//     "fontawesome-webfont",
-//     "webfonts/fontawesome-webfont/fontawesome-webfont",
-//     ("eot", "woff", "ttf", "svg")
-//     ) {
-//     font-style: normal;
-//     font-weight: 400;
-// }
+	--fa-font-path: 'fonts/';
 
-// @font-face {
-//     font-family: 'icomoon';
-//     src: url('webfonts/icomoon/icomoon.eot?jqd5bq');
-//     src: url('webfonts/icomoon/icomoon.eot?jqd5bq#iefix') format('embedded-opentype'),
-//         url('webfonts/icomoon/icomoon.ttf?jqd5bq') format('truetype'),
-//         url('webfonts/icomoon/icomoon.woff?jqd5bq') format('woff'),
-//         url('webfonts/icomoon/icomoon.svg?jqd5bq#icomoon') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+	--body-font-color: lighten($third, 10%);
 
-// @font-face {
-//     font-family: 'icomoon-free';
-//     src: url('webfonts/icomoon/IcoMoon-Free.ttf?jqd5bq') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+	--body-font-size     : 1rem;
+	--body-font-weight   : normal;
+	--body-line-height   : 1.4;
+	--heading-line-height: 1;
 
-@import url('https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic');
-// @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-// @import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	--font-size-base:    var(--body-font-size);
+	--font-size-large:   calc(var(--font-size-base) + (var(--font-size-base) / 5)); // ~18px
+	--font-size-small:   calc(var(--font-size-base) - (var(--font-size-base) / 5)); // ~14px--
+	--font-size-h1:      calc(var(--font-size-base) + 2vmax); // ~3rem 48px modular-scale(6)
+	--font-size-h2:      calc(var(--font-size-base) + 1.5vmax); // ~2.5rem 40px modular-scale(5)
+	--font-size-h3:      calc(var(--font-size-base) + 1vmax); // ~2rem 33px
+	--font-size-h4:      calc(var(--font-size-base) + 0.7vmax); // ~1.728rem 28px
+	--font-size-h5:      calc(var(--font-size-base) + 0.5vmax); // ~1.44rem 23px
+	--font-size-h6:      calc(var(--font-size-base) + 0.3vmax); // ~1.2rem 19px
+}
 
-$primary-font      : $font-stack-helvetica;
-$heading-font      : 'Oswald', sans-serif;
-$heading-font-light: 'Oswald', sans-serif;
+@mixin px($size: base) {
+	font-family: var(--primary-font);
+	font-weight: var(--body-font-weight);
+	line-height: var(--body-line-height);
+	color: var(--body-font-color);
 
-$fa-font-path: 'webfonts/';
+	@if $size == base {
+		font-size: var(--font-size-base);
+	} @else if $size == large {
+		font-size: var(--font-size-large);
+	} @else if $size == small {
+		font-size: var(--font-size-small);
+	}
+}
 
-$body-font-color: lighten($third, 10%);
+@mixin hx($size) {
+	font: {
+		family: var(--heading-font);
+		weight: 400;
+	};
+	color: var(--secondary);
+	display: block;
+	line-height: var(--heading-line-height);
+	margin-top: 0;
+	// margin-bottom: -(var(--border_thin));
 
-$body-font-size     : 1rem !default;
-$body-font-weight   : normal !default;
-$body-line-height   : 1.4 !default;
-$heading-line-height: 1 !default;
+	@if $size == h1 {
+		font-size: var(--font-size-h1);
+	} @else if $size == h2 {
+		font-size: var(--font-size-h2);
+	} @else if $size == h3 {
+		font-size: var(--font-size-h3);
+	} @else if $size == h4 {
+		font-size: var(--font-size-h4);
+	} @else if $size == h5 {
+		font-size: var(--font-size-h5);
+	} @else if $size == h6 {
+		font-size: var(--font-size-h6);
+	}
+}
 
-$heading-font-modular : 1rem !default;
+h1 {
+	@include hx(h1);
+}
 
-$bourbon: (
-	"modular-scale-base": $heading-font-modular,
-	"modular-scale-ratio": $major-second //$major-second
-);
+h2 {
+	@include hx(h2);
+}
 
-$font-size-base:    $body-font-size !default;
-$font-size-large:   $font-size-base + 0.2 !default; // ~18px
-$font-size-small:   $font-size-base - 0.2 !default; // ~14px
+h3 {
+	@include hx(h3);
+}
 
-$font-size-h1:      calc(1rem + 1.1vmax) !default; // ~3rem 48px modular-scale(6)
-$font-size-h2:      calc(1rem + 0.9vmax) !default; // ~2.5rem 40px modular-scale(5)
-$font-size-h3:      calc(1rem + 0.7vmax) !default; // ~2rem 33px
-$font-size-h4:      calc(1rem + 0.15vmax) !default; // ~1.728rem 28px
-$font-size-h5:      calc(1rem + 0.13vmax) !default; // ~1.44rem 23px
-$font-size-h6:      calc(1rem + 0.1vmax) !default; // ~1.2rem 19px
-/*=====  End of Fonts  ======*/
+h4 {
+	@include hx(h4);
+}
+
+h5 {
+	@include hx(h5);
+}
+
+h6 {
+	@include hx(h6);
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	// li {
+
+	//     @include grid-media($Medium) {
+	//         font-size: var(--font-size-large;
+	//     }
+	// }
+}
+
+a {
+	color: var(--secondary);
+	text-decoration: none;
+	transition: all var(--base-duration);
+	outline: none;
+
+	// &:active,
+	// &:focus,
+	// &:hover {
+	//     //color: $action-color;
+	// }
+}

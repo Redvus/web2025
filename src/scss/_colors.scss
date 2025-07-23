@@ -1,30 +1,35 @@
-/*================================
-=            Colors            =
-================================*/
+@use "sass:color";
 
-$primary  : #830800cc;  // Colors
-$secondary: #888888;  // Text
-$third    : #eeeeee;  // Background
-$fourth   : #ffffff;
-$five     : #7a97ab;
+$colors: (
+	primary  : #830800,
+	secondary: #888888,
+	third    : #eeeeee,
+	fourth   : #ffffff,
+	five     : #7a97ab
+);
 
-/*----------  Layout  ----------*/
-$layoutBackground : $third;
+:root {
+	@each $name, $color in $colors {
+		--#{$name}: #{$color};
+		--#{$name}-darken-5: #{color.adjust($color, $lightness: -5%)};
+		--#{$name}-darken-8: #{color.adjust($color, $lightness: -8%)};
+		--#{$name}-lighten-2: #{color.adjust($color, $lightness: 2%)};
+	}
 
-/*----------  Blind Color  ----------*/
-$blindBackgroundBW: $third;
-$blindColorBW: $fourth;
+	--layoutBackground : var(--third);
+	// --error : var(--third);
+	// --success : var(--fourth);
 
-$blindBackgroundWB: $fourth;
-$blindColorWB: $third;
+	/*----------  Blind Color  ----------*/
+	--blindBackgroundBW: var(--third);
+	--blindColorBW: var(--fourth);
 
-$blindBackgroundCW: #0099CC;
-$blindColorCW: $third;
+	--blindBackgroundWB: var(--fourth);
+	--blindColorWB: var(--third);
 
-$blindBackgroundYB: #FFCC33;
-$blindColorYB: $third;
+	--blindBackgroundCW: #0099CC;
+	--blindColorCW: var(--third);
 
-$error : $third;
-$success : $fourth;
-
-/*=====  End of Colors  ======*/
+	--blindBackgroundYB: #FFCC33;
+	--blindColorYB: var(--third);
+}

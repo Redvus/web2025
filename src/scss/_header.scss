@@ -1,9 +1,12 @@
+@use 'breakpoints' as bp;
+@use "sass:color";
+
 .header {
 	width: 100vw;
-	height: $headerHeight;
+	height: var(--header-height);
 	display: flex;
 	flex-direction: row;
-	background-color: darken($third, 5%);
+	background-color: var(--third-darken-5);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,16 +14,16 @@
 	overflow: hidden;
 
 	&__logo {
-		width: calc(#{$headerHeight} / #{$headerLogoAmount} - (#{$headerLogoPadding} * 2));
-		height: calc(#{$headerHeight} / #{$headerLogoAmount} - (#{$headerLogoPadding} * 2));
+		width: calc(var(--header-height) / var(--headerLogoAmount) - (var(--headerLogoPadding) * 2));
+		height: calc(var(--header-height) / var(--headerLogoAmount) - (var(--headerLogoPadding) * 2));
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: fixed;
-		top: calc(#{$headerHeight} - ((#{$headerHeight} / #{$headerLogoAmount})));
-		left: calc(#{$headerHeight} - ((#{$headerHeight} / #{$headerLogoAmount})));
-		background-color: $third;
-		padding: $headerLogoPadding;
+		top: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))));
+		left: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))));
+		background-color: var(--third);
+		padding: var(--headerLogoPadding);
 
 		a {
 			width: 100%;
