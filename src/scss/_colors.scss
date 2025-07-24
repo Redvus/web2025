@@ -2,7 +2,7 @@
 
 $colors: (
 	primary  : #830800,
-	secondary: #888888,
+	secondary: #000000,
 	third    : #eeeeee,
 	fourth   : #ffffff,
 	five     : #7a97ab
@@ -14,6 +14,10 @@ $colors: (
 		--#{$name}-darken-5: #{color.adjust($color, $lightness: -5%)};
 		--#{$name}-darken-8: #{color.adjust($color, $lightness: -8%)};
 		--#{$name}-lighten-2: #{color.adjust($color, $lightness: 2%)};
+		--#{$name}-lighten-5: #{color.adjust($color, $lightness: 5%)};
+		--#{$name}-lighten-10: #{color.adjust($color, $lightness: 10%)};
+		--#{$name}-lighten-20: #{color.adjust($color, $lightness: 20%)};
+		--#{$name}-lighten-30: #{color.adjust($color, $lightness: 30%)};
 	}
 
 	--layoutBackground : var(--third);

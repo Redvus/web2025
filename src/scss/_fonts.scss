@@ -1,16 +1,38 @@
 @use 'breakpoints' as bp;
+@use "sass:color";
 
 /*=============================
 =            Fonts            =
 =============================*/
+@font-face {
+	font-family: 'Roboto Flex';
+	src: url('/fonts/RobotoFlexVar.woff2') format('woff2-variations');
+	src: url('/fonts/RobotoFlexVar.woff2') format('woff2') tech('variations');
+	font-weight: 100 900;
+	font-stretch: 75% 125%;
+	font-style: oblique 0deg 10deg;
+	font-display: swap;
+}
+
+// Weight axis (typically 100-900)
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-width-condensed: 75%;
+$font-width-normal: 100%;
+$font-width-extended: 125%;
+
 :root {
-	--primary-font      : Helvetica, sans-serif;
-	--heading-font      : 'Oswald', sans-serif;
-	--heading-font-light: 'Oswald', sans-serif;
+	--primary-font      : "Roboto Flex", sans-serif;
+	--heading-font      : "Roboto Flex", sans-serif;
+	--heading-font-light: "Roboto Flex", sans-serif;
 
-	--fa-font-path: 'fonts/';
-
-	--body-font-color: lighten($third, 10%);
+	--body-font-color: var(--secondary-lighten-5);
+	--heading-font-color: var(--secondary-lighten-30);
 
 	--body-font-size     : 1rem;
 	--body-font-weight   : normal;
@@ -18,19 +40,21 @@
 	--heading-line-height: 1;
 
 	--font-size-base:    var(--body-font-size);
-	--font-size-large:   calc(var(--font-size-base) + (var(--font-size-base) / 5)); // ~18px
-	--font-size-small:   calc(var(--font-size-base) - (var(--font-size-base) / 5)); // ~14px--
-	--font-size-h1:      calc(var(--font-size-base) + 2vmax); // ~3rem 48px modular-scale(6)
-	--font-size-h2:      calc(var(--font-size-base) + 1.5vmax); // ~2.5rem 40px modular-scale(5)
-	--font-size-h3:      calc(var(--font-size-base) + 1vmax); // ~2rem 33px
-	--font-size-h4:      calc(var(--font-size-base) + 0.7vmax); // ~1.728rem 28px
-	--font-size-h5:      calc(var(--font-size-base) + 0.5vmax); // ~1.44rem 23px
-	--font-size-h6:      calc(var(--font-size-base) + 0.3vmax); // ~1.2rem 19px
+	--font-size-large:   calc(var(--font-size-base) + (var(--font-size-base) / 5));
+	--font-size-small:   calc(var(--font-size-base) - (var(--font-size-base) / 5));
+	--font-size-h1:      calc(var(--font-size-base) + 2vmax);
+	--font-size-h2:      calc(var(--font-size-base) + 1.5vmax);
+	--font-size-h3:      calc(var(--font-size-base) + 1vmax);
+	--font-size-h4:      calc(var(--font-size-base) + 0.7vmax);
+	--font-size-h5:      calc(var(--font-size-base) + 0.5vmax);
+	--font-size-h6:      calc(var(--font-size-base) + 0.3vmax);
 }
 
+// Base fonts styles
 @mixin px($size: base) {
 	font-family: var(--primary-font);
-	font-weight: var(--body-font-weight);
+	font-weight: $font-weight-regular;
+	font-stretch: $font-width-normal;
 	line-height: var(--body-line-height);
 	color: var(--body-font-color);
 
@@ -43,12 +67,11 @@
 	}
 }
 
+// Headings mixin
 @mixin hx($size) {
-	font: {
-		family: var(--heading-font);
-		weight: 400;
-	};
-	color: var(--secondary);
+	font-family: var(--heading-font);
+	font-weight: $font-weight-regular;
+	color: var(--heading-font-color);
 	display: block;
 	line-height: var(--heading-line-height);
 	margin-top: 0;
@@ -71,14 +94,20 @@
 
 h1 {
 	@include hx(h1);
+	font-weight: $font-weight-medium;
+	font-stretch: $font-width-normal;
 }
 
 h2 {
 	@include hx(h2);
+	font-weight: $font-weight-regular;
+	font-stretch: $font-width-normal;
 }
 
 h3 {
 	@include hx(h3);
+	font-weight: $font-weight-thin;
+	font-stretch: $font-width-extended;
 }
 
 h4 {
