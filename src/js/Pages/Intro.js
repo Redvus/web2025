@@ -15,19 +15,77 @@ export class Intro {
 	}
 
 	initLayoutDev() {
-		this.wrapper.innerHTML = `
-			<div class="sidebar">
-				<div class="sidebar__inside">
-
+		this.header = document.createElement('div');
+		this.header.className = 'header header--desktop';
+		this.header.innerHTML = `
+			<div class="header__logo">
+				<a href="/" class="header__logo_link">
+					<img src="/assets/dev/images/smibsLogoDev.png" alt="Logo" class="header__logo-img">
+				</a>
+			</div>
+			<div class="header__title">
+				<span class="header__title-text">Самарские&nbsp;библиотеки</span>
+			</div>
+			<div class="header__date">
+				<a href="javascript:void(0);" class="header__date_icon" id="blindButton">
+					<i class="fas fa-calendar-days"></i>
+				</a>
+				<div class="header__date_text">
+					<span class="header__date_now">Сегодня</span>
+					<span class="header__date_data">24/07/2025</span>
 				</div>
 			</div>
-			<div class="sidebar-right">
-				<div class="sidebar-right__blind">
+			<div class="header__user">
+				<span class="header__user_greetings">Здравствуйте,</span>
+				<span class="header__user_name">Александр Суворов</span>
+			</div>
+		`;
+
+		this.sidebar = document.createElement('div');
+		this.sidebar.className = 'sidebar';
+		this.sidebar.innerHTML = `
+			<div class="sidebar__inside">
+
+			</div>
+		`;
+
+		this.sidebarRight = document.createElement('div');
+		this.sidebarRight.className = 'sidebar-right';
+		this.sidebarRight.innerHTML = `
+			<div class="sidebar-right__blind">
+					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+						<i class="fas fa-user"></i>
+					</a>
+				</div>
+				<div class="sidebar-right__icon">
 					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
 						<i class="fas fa-eye-low-vision"></i>
 					</a>
 				</div>
-			</div>
+				<div class="sidebar-right__icon">
+					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+						<i class="fab fa-vk"></i>
+					</a>
+				</div>
+				<div class="sidebar-right__icon">
+					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+						<i class="fab fa-odnoklassniki"></i>
+					</a>
+				</div>
+				<div class="sidebar-right__icon">
+					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+						<i class="fab fa-yandex"></i>
+					</a>
+				</div>
+				<div class="sidebar-right__icon sidebar-right__icon--right">
+					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+						<i class="fas fa-0"></i>
+						<i class="fas fa-plus"></i>
+					</a>
+				</div>
+		`;
+
+		this.wrapper.innerHTML = `
 			<div class="wrapper__inside">
 				<div class="wrapper__inside__content">
 					<h1>Title 1</h1>
@@ -42,17 +100,6 @@ export class Intro {
 			</div>
 		`;
 
-		this.header = document.createElement('div');
-		this.header.className = 'header header--desktop';
-		this.header.innerHTML = `
-			<div class="header__logo">
-				<a href="/" class="header__logo_link">
-					<img src="/assets/dev/images/smibsLogoDev.png" alt="Logo" class="header__logo-img">
-				</a>
-			</div>
-
-		`;
-
 		this.footer = document.createElement('div');
 		this.footer.className = 'footer';
 		this.footerTopBlock = document.createElement('div');
@@ -60,5 +107,7 @@ export class Intro {
 		//Appends
 		this.wrapper.appendChild(this.header);
 		this.body.appendChild(this.footer);
+		this.body.appendChild(this.sidebar);
+		this.body.appendChild(this.sidebarRight);
 	}
 }

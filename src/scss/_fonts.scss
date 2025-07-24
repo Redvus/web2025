@@ -4,10 +4,30 @@
 /*=============================
 =            Fonts            =
 =============================*/
+// @font-face {
+// 	font-family: 'FontAwesome';
+// 	src: url('/assets/dev/fonts/fa-regular-400.woff2') format('woff2');
+// 	src: url('/assets/dev/fonts/fa-regular-400.woff2') format('woff2');
+// 	font-weight: normal;
+// 	// font-stretch: 75% 125%;
+// 	// font-style: oblique 0deg 10deg;
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: 'FontAwesome';
+// 	src: url('/assets/dev/fonts/fa-solid-900.woff2') format('woff2');
+// 	src: url('/assets/dev/fonts/fa-solid-900.woff2') format('woff2');
+// 	font-weight: 900;
+// 	// font-stretch: 75% 125%;
+// 	// font-style: oblique 0deg 10deg;
+// 	font-display: swap;
+// }
+
 @font-face {
 	font-family: 'Roboto Flex';
-	src: url('/fonts/RobotoFlexVar.woff2') format('woff2-variations');
-	src: url('/fonts/RobotoFlexVar.woff2') format('woff2') tech('variations');
+	src: url('fonts/RobotoFlexVar/RobotoFlexVar.woff2') format('woff2-variations');
+	src: url('fonts/RobotoFlexVar/RobotoFlexVar.woff2') format('woff2') tech('variations');
 	font-weight: 100 900;
 	font-stretch: 75% 125%;
 	font-style: oblique 0deg 10deg;
@@ -121,7 +141,6 @@ h5 {
 h6 {
 	@include hx(h6);
 }
-
 
 ul {
 	margin: 0;
