@@ -26,18 +26,20 @@ export class Intro {
 			<div class="header__title">
 				<span class="header__title-text">Самарские&nbsp;библиотеки</span>
 			</div>
-			<div class="header__date">
-				<a href="javascript:void(0);" class="header__date_icon" id="blindButton">
-					<i class="fas fa-calendar-days"></i>
-				</a>
-				<div class="header__date_text">
+			<div class="header__right">
+				<div class="header__user">
+					<div class="header__user_text">
+						<span class="header__user_greetings">Здравствуйте,</span>
+						<span class="header__user_name">Александр Суворов</span>
+					</div>
+					<a href="javascript:void(0);" class="header__user_icon" id="blindButton">
+						<i class="fas fa-user"></i>
+					</a>
+				</div>
+				<a href="javascript:void(0);" class="header__date">
 					<span class="header__date_now">Сегодня</span>
 					<span class="header__date_data">24/07/2025</span>
-				</div>
-			</div>
-			<div class="header__user">
-				<span class="header__user_greetings">Здравствуйте,</span>
-				<span class="header__user_name">Александр Суворов</span>
+				</a>
 			</div>
 		`;
 
@@ -54,7 +56,7 @@ export class Intro {
 		this.sidebarRight.innerHTML = `
 			<div class="sidebar-right__blind">
 					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
-						<i class="fas fa-user"></i>
+						<i class="fas fa-calendar-days"></i>
 					</a>
 				</div>
 				<div class="sidebar-right__icon">
