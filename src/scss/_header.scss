@@ -14,7 +14,7 @@
 	top: 0;
 	left: 0;
 	padding: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount)))) calc(((var(--header-height)) + var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))))) 0;
-	z-index: 1010;
+	z-index: 1030;
 	overflow: hidden;
 
 	&__logo {
@@ -123,19 +123,20 @@
 		height: 100%;
 		display: flex;
 		flex-direction: row;
-		align-items: flex-end;
+		align-items: flex-start;
 		justify-content: center;
 		position: relative;
 		top: 0;
 		left: 0;
-		margin-right: calc((var(--marginBase)) * 2);
+		margin-right: calc((var(--marginBase)) / 2);
 
 		&_text {
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			align-items: flex-end;
+			align-items: flex-start;
 			justify-content: center;
+			margin-left: calc((var(--marginBase)) / 2);
 		}
 
 		&_icon {

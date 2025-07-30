@@ -10,7 +10,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 1020;
 	overflow-y: auto;
 
 	&-right {
@@ -25,7 +25,7 @@
 		top: 0;
 		padding-top: calc((var(--header-height)) + var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))));
 		padding-right: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))));
-		z-index: 1020;
+		z-index: 1040;
 		overflow-y: auto;
 
 		&__blind {
@@ -78,10 +78,13 @@
 				i {
 					font-size: var(--font-size-h4);
 					color: var(--primary);
+					position: relative;
 
-					&.fa-plus {
+					&.fa-plus, span {
 						font-size: var(--font-size-small);
-						margin-left: calc(var(--headerLogoPadding) / 4);
+						margin-left: calc(var(--headerLogoPadding) / 2);
+						margin-top: var(--headerLogoPadding);
+						position: absolute;
 					}
 				}
 			}
