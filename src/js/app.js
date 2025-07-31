@@ -13,12 +13,12 @@ import { Footer } from './Components/Footer.js';
 class Plugins {
 
     constructor() {
-        new Intro();
         new Header();
+        new Nav();
         new SidebarRight();
         new SidebarLeft();
-        new Nav();
         new Footer();
+        // new Intro();
     }
 
 

@@ -3,8 +3,11 @@
 export class Header {
 	constructor(parameters) {
 		this.initLayout();
-		if (import.meta.env.DEV || import.meta.env.PROD) {
-			this.initLayoutDev(); // Скрывать для build
+		if (
+			import.meta.env.DEV
+			|| import.meta.env.PROD // Скрывать для build
+		) {
+			this.initLayoutDev();
 		}
 	}
 
@@ -23,30 +26,39 @@ export class Header {
 				</a>
 			</div>
 			<div class="header__title">
-				<span class="header__title-text">Самарские&nbsp;библиотеки</span>
+				<span class="header__title--text">Самарские&nbsp;библиотеки</span>
+				<span class="header__title--subtext">Муниципальное бюджетное учреждение культуры городского округа Самара<br>«Самарская муниципальная информационно-библиотечная система»</span>
 			</div>
 			<div class="header__right">
 				<div class="header__user">
 					<a href="javascript:void(0);" class="header__user_icon" id="blindButton">
 						<i class="fas fa-calendar-days"></i>
 					</a>
-					<div class="header__user_text">
+					<a href="javascript:void(0);" class="header__user_text">
 						<span class="header__date_now">Сегодня</span>
 						<span class="header__date_data">24/07/2025</span>
-					</div>
+					</a>
 				</div>
 				<div class="header__user">
 					<a href="javascript:void(0);" class="header__user_icon" id="blindButton">
 						<i class="fas fa-user"></i>
 					</a>
-					<div class="header__user_text">
+					<a href="javascript:void(0);" class="header__user_text">
 						<span class="header__user_greetings">Здравствуйте,</span>
 						<span class="header__user_name">Александр Суворов</span>
-					</div>
+					</a>
 				</div>
+			</div>
+			<div class="header__logo_right">
+				<a href="javascript:void(0);" class="header__logo_right_button" id="navButton">
+					<i class="fas fa-bars"></i>
+				</a>
+				<a href="javascript:void(0);" class="header__logo_right_button--close" id="navButtonClose">
+					<i class="fas fa-plus"></i>
+				</a>
 			</div>
 		`;
 
-		this.wrapper.appendChild(this.header);
+		this.body.appendChild(this.header);
 	}
 }

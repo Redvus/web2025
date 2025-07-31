@@ -1,5 +1,4 @@
 import {gsap} from "gsap";
-// import {  } from "../../node_modules/minibarjs/dist/minibar.min.js";
 
 class Modal {
 

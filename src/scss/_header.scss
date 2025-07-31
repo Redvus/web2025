@@ -14,7 +14,7 @@
 	top: 0;
 	left: 0;
 	padding: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount)))) calc(((var(--header-height)) + var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))))) 0;
-	z-index: 1030;
+	z-index: 2000;
 	overflow: hidden;
 
 	&__logo {
@@ -44,24 +44,77 @@
 				object-position: center;
 			}
 		}
+
+		&_right {
+			width: calc(var(--header-height) / var(--headerLogoAmount) - (var(--headerLogoPadding) * 2));
+			height: calc(var(--header-height) / var(--headerLogoAmount) - (var(--headerLogoPadding) * 2));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: fixed;
+			top: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))));
+			right: calc(var(--header-height) - ((var(--header-height) / var(--headerLogoAmount))));
+			background-color: var(--third);
+			padding: var(--headerLogoPadding);
+			cursor: pointer;
+
+			a {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+
+				i {
+					font-size: var(--font-size-h3);
+					color: var(--primary);
+				}
+			}
+
+			&_button {
+
+				&--close {
+					position: absolute;
+					opacity: 0;
+					visibility: hidden;
+
+					i {
+						transform: rotate(45deg);
+					}
+				}
+			}
+
+			&:hover {
+				background-color: var(--elementBackground);
+			}
+		}
 	}
 
 	&__title {
 		width: auto;
-		height: calc(var(--header-height) / var(--headerLogoAmount) - (var(--headerLogoPadding) * 2));
+		height: calc(var(--header-height) / var(--headerLogoAmount));
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		position: relative;
 		top: 0;
 		left: 0;
 		// padding: var(--headerLogoPadding) 0;
 		// background-color: var(--third);
 
-		span {
+		&--text {
 			@include hx(h3);
 			font-weight: $font-weight-thin;
 			line-height: 1.6vmax;
 			text-transform: uppercase;
+		}
+
+		&--subtext {
+			@include px(small);
+			font-weight: $font-weight-thin;
+			line-height: 1;
+			margin-top: calc(var(--header-height) * 0.12);
 		}
 	}
 

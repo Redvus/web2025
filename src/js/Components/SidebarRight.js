@@ -15,11 +15,6 @@ export class SidebarRight {
 		this.sidebarRight = document.createElement('div');
 		this.sidebarRight.className = 'sidebar-right';
 		this.sidebarRight.innerHTML = `
-			<div class="sidebar-right__blind">
-				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="navButton">
-					<i class="fas fa-bars"></i>
-				</a>
-			</div>
 			<div class="sidebar-right__icon">
 				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
 					<i class="fas fa-eye-low-vision"></i>
@@ -47,6 +42,6 @@ export class SidebarRight {
 			</div>
 		`;
 
-		this.wrapper.appendChild(this.sidebarRight);
+		this.body.appendChild(this.sidebarRight);
 	}
 }
