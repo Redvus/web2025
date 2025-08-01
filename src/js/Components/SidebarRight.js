@@ -13,30 +13,30 @@ export class SidebarRight {
 
 	initLayoutDev() {
 		this.sidebarRight = document.createElement('div');
-		this.sidebarRight.className = 'sidebar-right';
+		this.sidebarRight.className = 'sidebar sidebar--right';
 		this.sidebarRight.innerHTML = `
-			<div class="sidebar-right__icon">
-				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+			<div class="sidebar__icon">
+				<a href="javascript:void(0);" class="sidebar__icon_button" id="blindButton">
 					<i class="fas fa-eye-low-vision"></i>
 				</a>
 			</div>
-			<div class="sidebar-right__icon">
-				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+			<div class="sidebar__icon">
+				<a href="javascript:void(0);" class="sidebar__icon_button" id="vkButton">
 					<i class="fab fa-vk"></i>
 				</a>
 			</div>
-			<div class="sidebar-right__icon">
-				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+			<div class="sidebar__icon">
+				<a href="javascript:void(0);" class="sidebar__icon_button" id="odnoklassButton">
 					<i class="fab fa-odnoklassniki"></i>
 				</a>
 			</div>
-			<div class="sidebar-right__icon">
-				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+			<div class="sidebar__icon">
+				<a href="javascript:void(0);" class="sidebar__icon_button" id="yandexButton">
 					<i class="fab fa-yandex"></i>
 				</a>
 			</div>
-			<div class="sidebar-right__icon sidebar-right__icon--right">
-				<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
+			<div class="sidebar__icon sidebar__icon--right">
+				<a href="javascript:void(0);" class="sidebar__icon_button" id="zeroButton">
 					<i class="fas fa-0"><span>+</span></i>
 				</a>
 			</div>

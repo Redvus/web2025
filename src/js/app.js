@@ -24,7 +24,7 @@ class Plugins {
         new Calendar();
         new User();
 
-        // new Intro();
+        new Intro();
     }
 }
 
