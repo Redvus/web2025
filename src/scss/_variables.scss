@@ -33,7 +33,27 @@
     :root {
         --header-height: 5vmax;
         --headerLogoPadding: 0.5vmax;
+    }
+}
 
+@include bp.media-up('Large') {
+    :root {
+        --header-height: 5.3vmax;
+        --headerLogoPadding: 0.5vmax;
+    }
+}
+
+@include bp.media-up('Medium') {
+    :root {
+        --header-height: 7vmax;
+        --headerLogoPadding: 0.5vmax;
+    }
+}
+
+@include bp.media-up('Small') {
+    :root {
+        --header-height: 7vmax;
+        --headerLogoPadding: 0.7vmax;
     }
 }
 

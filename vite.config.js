@@ -29,6 +29,10 @@ export default defineConfig({
                         return 'app.css';
                     }
 
+                    if (/\.(woff2?|ttf|otf|eot)$/.test(names ?? '')) {
+                        return 'fonts/[name][extname]';
+                    }
+
                     // default value
                     // ref: https://rollupjs.org/guide/en/#outputassetfilenames
                     return '[name]-[hash][extname]';

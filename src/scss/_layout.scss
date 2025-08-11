@@ -11,17 +11,17 @@ body {
         @include px(large);
         font-stretch: $font-width-extended;
 
-        i {
-            @include px(large);
-        }
+        // i {
+        //     @include px(large);
+        // }
     }
 
     @include bp.media-up('Large') {
         @include px(base);
 
-        i {
-            @include px(base);
-        }
+        // i {
+        //     @include px(base);
+        // }
     }
 
     @include bp.media-up('Medium') {
@@ -29,9 +29,9 @@ body {
         font-stretch: $font-width-normal;
         // font-weight: $font-weight-medium;
 
-        i {
-            @include px(base);
-        }
+        // i {
+        //     @include px(base);
+        // }
     }
 }
 

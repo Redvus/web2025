@@ -1,3 +1,5 @@
+
+
 export class Intro {
 
 	constructor(parameters) {
@@ -16,18 +18,6 @@ export class Intro {
 
 	initLayoutDev() {
 		this.wrapper.innerHTML = `
-			<div class="sidebar">
-				<div class="sidebar__inside">
-
-				</div>
-			</div>
-			<div class="sidebar-right">
-				<div class="sidebar-right__blind">
-					<a href="javascript:void(0);" class="sidebar-right__blind_button" id="blindButton">
-						<i class="fas fa-eye-low-vision"></i>
-					</a>
-				</div>
-			</div>
 			<div class="wrapper__inside">
 				<div class="wrapper__inside__content">
 					<h1>Title 1</h1>
@@ -41,24 +31,5 @@ export class Intro {
 				</div>
 			</div>
 		`;
-
-		this.header = document.createElement('div');
-		this.header.className = 'header header--desktop';
-		this.header.innerHTML = `
-			<div class="header__logo">
-				<a href="/" class="header__logo_link">
-					<img src="/assets/dev/images/smibsLogoDev.png" alt="Logo" class="header__logo-img">
-				</a>
-			</div>
-
-		`;
-
-		this.footer = document.createElement('div');
-		this.footer.className = 'footer';
-		this.footerTopBlock = document.createElement('div');
-
-		//Appends
-		this.wrapper.appendChild(this.header);
-		this.body.appendChild(this.footer);
 	}
 }
