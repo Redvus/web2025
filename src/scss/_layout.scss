@@ -48,31 +48,134 @@ body {
         display: block;
         overflow: hidden;
         // background-color: var(--fourth);
+    }
 
-        &_content {
-            width: 100%;
-            min-height: 100vh;
-            display: block;
-            overflow: hidden;
-
-            @include bp.media-up('Medium') {
-                padding: 0 calc(var(--header-height) * 1.5);
-            }
-        }
+    &__content {
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        overflow: hidden;
 
         &_top {
             width: 100%;
-            min-height: calc(((100vmax - (var(--header-height) * 3)) * 0.35));
-            // height: calc(((100% - (var(--header-height) * 3)) * 0.6));
+            // min-height: 7vmax;
+            display: block;
+            margin-bottom: 2rem;
+            background-color: var(--elementBackground);
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+
+        &_title {
+            font-weight: $font-weight-thin;
+            font-stretch: $font-width-extended;
+        }
+
+        &_news {
+            width: 100%;
+            height: 30vmax;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            position: relative;
             margin-bottom: 2rem;
 
-            @include bp.media-up('Medium') {
-                height: inherit;
+
+
+            &_item {
+                width: var(--newsItemWidth);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--elementBackground);
+                // padding: var(--marginBase) calc(var(--marginBase) * 2);
+                // color: var(--secondary-darken-5);
+                // font-size: var(--font-size-base);
+                // font-weight: $font-weight-medium;
+                // background-color: var(--elementBackground);
+
+                // h3 {
+                //     margin: 0;
+                //     font-size: var(--font-size-large);
+                //     font-weight: $font-weight-bold;
+                // }
+
+                // p {
+                //     margin-top: calc(var(--marginBase) * 0.5);
+                //     font-size: var(--font-size-small);
+                // }
+
+                &_top {
+                    width: 100%;
+                    height: calc(var(--newsItemWidth) * 1.7);
+                    display: block;
+                    background-color: var(--third-darken-13);
+                }
+
+                &_bottom {
+                    width: 100%;
+                    height: calc(100% - (var(--newsItemWidth) * 1.7));
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                &_date {
+                    width: calc(100% - (var(--marginBase) * 2));
+                    height: var(--newsItemDateHeight);
+                    display: flex;
+                    align-items: center;
+                    // justify-content: center;
+                    padding: 0 var(--marginBase);
+                }
+
+                &_title {
+                    width: calc(100% - (var(--marginBase) * 2));
+                    height: var(--newsItemTitleHeight);
+                    display: flex;
+                    align-items: center;
+                    // justify-content: center;
+                    padding: 0 var(--marginBase);
+                    background-color: var(--third-darken-5);
+
+                    h4 {
+                        margin: 0;
+                        font-weight: $font-weight-thin;
+                    }
+                }
+
+                &_text {
+                    width: calc(100% - (var(--marginBase) * 2));
+                    height: var(--newsItemTextHeight) ;
+                    display: flex;
+                    // justify-content: center;
+                    padding: 0 var(--marginBase);
+                }
             }
+        }
+
+        @include bp.media-up('Medium') {
+            padding: 0 calc(var(--header-height) * 1.5);
+        }
+    }
+
+    &__hero {
+        width: 100%;
+        min-height: calc(((100vmax - (var(--header-height) * 3)) * 0.35));
+        // height: calc(((100% - (var(--header-height) * 3)) * 0.6));
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 2rem;
+
+        @include bp.media-up('Medium') {
+            height: inherit;
         }
 
         &_banner {
@@ -103,20 +206,24 @@ body {
 
             &_top {
                 width: 100%;
-                height: 40%;
+                height: var(--anniversaryTopHeight);
                 display: flex;
                 flex-direction: row;
+                background-color: var(--third-darken-5);
             }
 
             &_bottom {
-                width: calc(100% - (var(--marginBase) * 2));
-                height: calc(60% - (var(--marginBase) * 2));
-                display: block;
+                width: calc(100% - (var(--marginBase) * 4));
+                height: calc((100% - var(--anniversaryTopHeight)) - (var(--marginBase) * 2));
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // align-items: center;
                 color: var(--secondary-darken-5);
                 font-size: var(--font-size-base);
                 // font-weight: $font-weight-bold;
                 // background-color: var(--third-darken-5);
-                padding: var(--marginBase);
+                padding: var(--marginBase) calc(var(--marginBase) * 2);
 
                 p {
                     // margin: 0;
@@ -142,6 +249,7 @@ body {
                 height: 100%;
                 display: block;
                 background-color: var(--secondary);
+                overflow: hidden;
 
                 img {
                     width: 100%;
@@ -161,7 +269,7 @@ body {
 
             &_date {
                 width: calc(100% - (var(--marginBase) * 2));
-                height: 30%;
+                height: var(--anniversaryTopDateHeight);
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -173,10 +281,10 @@ body {
                 padding: 0 var(--marginBase);
             }
 
-            &_name{
+            &_name {
                 width: calc(100% - (var(--marginBase) * 2));
-                // height: calc(80% - (var(--marginBase) * 1));
-                height: 70%;
+                height: calc((100% - var(--anniversaryTopDateHeight)) - (var(--marginBase) * 1));
+                // height: 70%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -184,7 +292,7 @@ body {
                 color: var(--secondary);
                 font-size: var(--font-size-base);
                 font-stretch: $font-width-condensed;
-                padding: 0 var(--marginBase);
+                padding: 0 var(--marginBase) var(--marginBase);
 
                 h4 {
                     margin: 0;

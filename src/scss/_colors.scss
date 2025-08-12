@@ -13,6 +13,8 @@ $colors: (
 		--#{$name}: #{$color};
 		--#{$name}-darken-5: #{color.adjust($color, $lightness: -5%)};
 		--#{$name}-darken-8: #{color.adjust($color, $lightness: -8%)};
+		--#{$name}-darken-10: #{color.adjust($color, $lightness: -10%)};
+		--#{$name}-darken-13: #{color.adjust($color, $lightness: -13%)};
 		--#{$name}-lighten-2: #{color.adjust($color, $lightness: 2%)};
 		--#{$name}-lighten-5: #{color.adjust($color, $lightness: 5%)};
 		--#{$name}-lighten-10: #{color.adjust($color, $lightness: 10%)};

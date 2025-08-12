@@ -24,9 +24,18 @@
 
     --bannerWidth: 65%;
 
+    /*----------  Anniversary  ----------*/
+    --anniversaryTopHeight: 45%;
+    --anniversaryTopDateHeight: 30%;
 
-    /*----------  Nav  ----------*/
 
+    /*----------  News  ----------*/
+    --newsItemWidth: calc(100% / 4.3);
+
+    --newsItemHeightNum: 5%;
+    --newsItemDateHeight: calc(var(--newsItemHeightNum) * 3);
+    --newsItemTitleHeight: calc(var(--newsItemHeightNum) * 4);
+    --newsItemTextHeight: calc(var(--newsItemHeightNum) * 13);
 
     /*----------  Footer  ----------*/
 }
