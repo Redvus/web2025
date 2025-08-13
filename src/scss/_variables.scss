@@ -30,14 +30,23 @@
 
 
     /*----------  News  ----------*/
+    --newsHeight: 35vmax;
     --newsItemWidth: calc(100% / 4.3);
 
     --newsItemHeightNum: 5%;
     --newsItemDateHeight: calc(var(--newsItemHeightNum) * 3);
-    --newsItemTitleHeight: calc(var(--newsItemHeightNum) * 4);
-    --newsItemTextHeight: calc(var(--newsItemHeightNum) * 13);
+    --newsItemTitleHeight: calc(var(--newsItemHeightNum) * 7);
+    --newsItemTextHeight: calc(var(--newsItemHeightNum) * 10);
+
+    /*----------  Read  ----------*/
+    --readHeight: 20vmax;
+    --readItemWidth: calc(100% / 5.5);
+
+    --resourcesHeight: 5vmax;
+    --resourcesItemWidth: calc(100% / 6.8);
 
     /*----------  Footer  ----------*/
+    --footerHeight: 10vmax;
 }
 
 @include bp.media-up('XLarge') {
@@ -146,6 +155,10 @@ select {
     font-size: inherit;
     cursor: inherit;
     line-height: inherit;
+}
+
+img {
+    transition: all var(--base-duration);
 }
 /*=====  End of Layout  ======*/
 

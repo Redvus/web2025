@@ -39,7 +39,7 @@ body {
     width: calc(100% - (var(--header-height) * 3));
     min-height: 100vh;
     display: block;
-    padding: calc(var(--header-height) * 1.5);
+    padding: calc(var(--header-height) * 1.5) calc(var(--header-height) * 1.5) calc(var(--header-height) * 0.5);
     overflow: hidden;
 
     &__inside {
@@ -79,13 +79,11 @@ body {
 
         &_news {
             width: 100%;
-            height: 30vmax;
+            height: var(--newsHeight);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin-bottom: 2rem;
-
-
 
             &_item {
                 width: var(--newsItemWidth);
@@ -93,28 +91,25 @@ body {
                 display: flex;
                 flex-direction: column;
                 background-color: var(--elementBackground);
-                // padding: var(--marginBase) calc(var(--marginBase) * 2);
-                // color: var(--secondary-darken-5);
-                // font-size: var(--font-size-base);
-                // font-weight: $font-weight-medium;
-                // background-color: var(--elementBackground);
-
-                // h3 {
-                //     margin: 0;
-                //     font-size: var(--font-size-large);
-                //     font-weight: $font-weight-bold;
-                // }
-
-                // p {
-                //     margin-top: calc(var(--marginBase) * 0.5);
-                //     font-size: var(--font-size-small);
-                // }
+                cursor: pointer;
 
                 &_top {
                     width: 100%;
                     height: calc(var(--newsItemWidth) * 1.7);
                     display: block;
                     background-color: var(--third-darken-13);
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-position: center;
+                        object-fit: cover;
+                        opacity: 0.8;
+                        // transform: scale(1.05);
+                        filter: grayscale(0.3);
+                    }
                 }
 
                 &_bottom {
@@ -132,6 +127,7 @@ body {
                     align-items: center;
                     // justify-content: center;
                     padding: 0 var(--marginBase);
+                    color: var(--primary);
                 }
 
                 &_title {
@@ -141,20 +137,121 @@ body {
                     align-items: center;
                     // justify-content: center;
                     padding: 0 var(--marginBase);
-                    background-color: var(--third-darken-5);
+                    // background-color: var(--third-darken-5);
 
                     h4 {
                         margin: 0;
                         font-weight: $font-weight-thin;
+                        font-stretch: $font-width-normal;
+                        // color: var(--primary);
                     }
                 }
 
                 &_text {
                     width: calc(100% - (var(--marginBase) * 2));
-                    height: var(--newsItemTextHeight) ;
+                    height: calc(var(--newsItemTextHeight) - (var(--marginBase) * 2)) ;
                     display: flex;
-                    // justify-content: center;
-                    padding: 0 var(--marginBase);
+                    align-items: flex-end;
+                    padding: var(--marginBase);
+                }
+
+                &:hover {
+
+                    .wrapper__content_news_item_top {
+                        img {
+                            // transform: scale(1);
+                            opacity: 1;
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        &_read {
+            width: 100%;
+            min-height: var(--readHeight);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            &_item {
+                width: var(--readItemWidth);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--elementBackground);
+
+                &_image {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    // background-color: var(--third-darken-13);
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-position: center;
+                        object-fit: cover;
+                        opacity: 0.8;
+                        transform: scale(1.05);
+                    }
+
+                    &:hover {
+
+                        img {
+                            transform: scale(1);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_bottom {
+            width: 100%;
+            // min-height: var(--resourcesHeight);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // margin-bottom: 2rem;
+
+            &_item {
+                width: var(--resourcesItemWidth);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--elementBackground);
+
+                &_image {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    // background-color: var(--third-darken-13);
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-position: center;
+                        object-fit: cover;
+                        // opacity: 0.8;
+                        // transform: scale(1.05);
+                    }
+
+                    // &:hover {
+
+                    //     img {
+                    //         transform: scale(1);
+                    //         opacity: 1;
+                    //     }
+                    // }
                 }
             }
         }

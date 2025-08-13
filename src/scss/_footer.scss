@@ -1,0 +1,8 @@
+.footer {
+	width: calc(100% - (var(--header-height) * 3));
+	min-height: var(--footerHeight);
+	display: flex;
+	flex-direction: row;
+	padding: calc(var(--header-height) / 2) calc(var(--header-height) * 1.5);
+	background-color: var(--third-darken-5);
+}
