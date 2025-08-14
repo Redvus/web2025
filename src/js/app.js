@@ -12,6 +12,7 @@ import { SidebarLeft } from './Components/SidebarLeft.js';
 import { Footer } from './Components/Footer.js';
 import { Calendar } from './Components/Calendar.js';
 import { User } from './Components/User.js';
+import { News } from './Pages/News.js';
 
 class Plugins {
 
@@ -25,6 +26,7 @@ class Plugins {
         new User();
 
         new Intro();
+        new News();
     }
 }
 

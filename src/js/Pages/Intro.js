@@ -63,8 +63,9 @@ export class Intro {
 
 		this.newsItemBlock = this.wrapper.querySelector('#frontNews');
 		for(let i = 0; i < 4; i++) {
-			const newsItem = this.newsItemBlock.cloneNode(true);
+			const newsItem = document.createElement('div');
 			newsItem.classList.add('wrapper__content_news_item');
+			newsItem.id = 'newsItem_' + (i + 1);
 			newsItem.innerHTML = `
 				<picture class="wrapper__content_news_item_top">
 					<img src="/assets/dev/images/newsImageSample.jpeg" alt="News Image ${i + 1}">
@@ -87,7 +88,7 @@ export class Intro {
 
 		this.newsItemBlock = this.wrapper.querySelector('#frontAnounces');
 		for(let i = 0; i < 4; i++) {
-			const newsItem = this.newsItemBlock.cloneNode(true);
+			const newsItem = document.createElement('div');
 			newsItem.classList.add('wrapper__content_news_item');
 			newsItem.innerHTML = `
 				<picture class="wrapper__content_news_item_top">
@@ -111,7 +112,7 @@ export class Intro {
 
 		this.readItemBlock = this.wrapper.querySelector('#frontRead');
 		for(let i = 0; i < 5; i++) {
-			const readItem = this.readItemBlock.cloneNode(true);
+			const readItem = document.createElement('div');
 			readItem.classList.add('wrapper__content_read_item');
 			readItem.innerHTML = `
 				<picture class="wrapper__content_read_item_image">

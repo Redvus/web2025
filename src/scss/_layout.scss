@@ -54,6 +54,7 @@ body {
         width: 100%;
         min-height: 100vh;
         display: block;
+        position: relative;
         overflow: hidden;
 
         &_top {
@@ -92,6 +93,7 @@ body {
                 flex-direction: column;
                 background-color: var(--elementBackground);
                 cursor: pointer;
+                margin-bottom: calc(var(--marginBase) * 2);
 
                 &_top {
                     width: 100%;
