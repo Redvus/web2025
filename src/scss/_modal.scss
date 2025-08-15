@@ -45,13 +45,11 @@
 
 			&_close {
 				@include buttonClose();
-				background-color: var(--fourth);
 			}
 		}
 
 		&_close {
-			@include buttonClose();
-			background-color: var(--third);
+			@include buttonClose(grayBack);
 		}
 	}
 }
