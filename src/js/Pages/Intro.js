@@ -22,7 +22,7 @@ export class Intro {
 				</div>
 				<div class="wrapper__hero">
 					<div class="wrapper__hero_banner">
-						<img src="/assets/dev/images/in-slider-il2.jpg" alt="Banner Image">
+						<img src="/assets/dev/images/bannerSlide_1.png" alt="Banner Image">
 					</div>
 					<div class="wrapper__hero_anniversary">
 						<div class="wrapper__hero_anniversary_top">
