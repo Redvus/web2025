@@ -19,8 +19,29 @@ export class Footer {
 				<div class="footer__top_part footer__top_adress">
 					<p class="footer__adress--desktop"> <a href="mailto:smibs@bk.ru">smibs@bk.ru</a><br>
 					<a href="tel:+78462421323">+7 846 242 13 23</a></p>
-					<p>Физический адрес:<br>443100, г. Самара, ул. Самарская/Маяковского, д. 190/19</p>
-					<p>Юридический адрес:<br>443001, г. Самара, ул. Ярмарочная, д. 3 / ул. Молодогвардейская, д. 167 </p>
+				</div>
+				<div class="footer__top_part footer__top_adress">
+					<p>Физический адрес:<br>443100, г. Самара, ул. Самарская/Маяковского, д. 190/19<br>
+					Юридический адрес:<br>443001, г. Самара, ул. Ярмарочная, д. 3 / ул. Молодогвардейская, д. 167 </p>
+				</div>
+				<div class="footer__top_part footer__top_adress">
+					<ul>
+						<li>Учреждение</li>
+						<li>Библиотеки</li>
+						<li>Читателям</li>
+						<li>Услуги</li>
+						<li>Деятельность</li>
+						<li>Краеведение</li>
+						<li>Электронные библиотеки</li>
+						<li>Коллегам</li>
+						<li>Виртуальная библиотека</li>
+					</ul>
+				</div>
+				<div class="footer__top_part footer__top_adress">
+					<ul>
+						<li>Политика обработки персональных данных</li>
+						<li>Новости</li>
+					</ul>
 				</div>
 			</div>
 			<div class="footer__bottom">

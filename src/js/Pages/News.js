@@ -9,7 +9,7 @@ export class News {
 			this.initNewsDev(); // Скрывать для build
 		}
 		this.initNewsAnim();
-		new NewsSingle('Новые правила въезда в Россию', '10.08.2025', 'Для современного мира сложившаяся структура организации влечёт за собой интересный процесс внедрения модернизации системы массового участия...');
+		new NewsSingle('Новые правила въезда в Россию', '10.08.2025', 'Значимость этих проблем настолько очевидна, что сложившаяся структура организации требует определения и уточнения существующий финансовых и административных условий. Разнообразный и богатый опыт рамки и место обучения кадров способствует подготовке и реализации форм воздействия. Для современного мира постоянное информационно-пропогандистское обеспечение нашей деятельности требует определения и уточнения поэтапного и последовательного развития общества. Следует отметить, что управление и развитие структуры способствует подготовке и реализации соответствующих условий активизации. Следует отметить, что понимание сущности ресурсосберегающих технологий обеспечивает актуальность экономической целесообразности принимаемых изменений. Повседневная практика показывает, что реализация намеченных плановых заданий создаёт предпосылки качественно новых шагов для поэтапного и последовательного развития общества. Значимость этих проблем настолько очевидна, что постоянное информационно-пропогандистское обеспечение нашей деятельности способствует подготовке и реализации позиции, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же новая модель организационной деятельности позволяет выполнять важные задания по разработке поставленных обществом и правительством задач. Не вызывает сомнений, что повышение уровня гражданского сознания требует анализа поэтапного и последовательного развития общества. Не следует, однако, забывать, что консультация с широким активом представляет собой интересный эксперимент модели развития.');
 	}
 
 	initLayout() {
@@ -33,6 +33,13 @@ export class News {
 		this.newsAllTitle.className = 'modal__news_title';
 		this.newsAllTitle.innerHTML = `
 			Новости. Август 2025
+		`;
+
+		this.newsClose = document.createElement('div');
+		this.newsClose.className = 'modal__news_close';
+		this.newsClose.id = 'newsClose';
+		this.newsClose.innerHTML = `
+			<i class="fas fa-plus"></i>
 		`;
 
 		// this.newsItemBlock = this.wrapper.querySelector('#frontNews');
@@ -63,6 +70,7 @@ export class News {
 		this.wrapper.appendChild(this.newsAll);
 		this.newsAll.appendChild(this.newsAllTitle);
 		this.newsAll.appendChild(this.newsAllBlock);
+		this.newsAll.appendChild(this.newsClose);
 		// this.newsAll.appendChild(this.newsItemBlock);
 	}
 
@@ -85,35 +93,47 @@ export class News {
 				tl
 					.to(this.wrapperContent, {
 						duration: 0.3,
-						// delay: '-0.1',
 						autoAlpha: 0,
-						// yPercent: 0,
 						zIndex: -1
 					}, "<")
-					// .to(this.newsClose, {
-					// 	duration: 0.15,
-					// 	delay: 0.13,
-					// 	autoAlpha: 1,
-					// 	// scale: 1
-					// }, "<")
 					.to(this.newsAll, {
 						duration: 0.3,
-						// delay: '-0.1',
 						autoAlpha: 1,
-						// yPercent: 0,
 						zIndex: 1000
-					}, "<")
+					}, "<0.3")
+					.to(this.newsClose, {
+						scale: 1,
+						duration: 0.3
+					}, "<0.3");
 				;
 
 				tl.play();
+				isOpen = true;
 
 			} else {
 				tl.reverse("<0.2");
 			}
 
-			// if (!isOpen) {
-			// 	this.headerLogoRight.style.backgroundColor = 'var(--layoutBackground)';
-			// }
+			this.newsClose.addEventListener('click', () => {
+				tl
+					.to(this.newsClose, {
+						scale: 0,
+						duration: 0.3
+					})
+					.to(this.newsAll, {
+						duration: 0.3,
+						autoAlpha: 0,
+						zIndex: -1
+					}, "<")
+					.to(this.wrapperContent, {
+						duration: 0.3,
+						autoAlpha: 1,
+						zIndex: 1
+					}, "<")
+
+				tl.play();
+				isOpen = false;
+			});
 
 			isOpen = !isOpen;
 		});

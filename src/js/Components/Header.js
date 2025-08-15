@@ -59,7 +59,7 @@ export class Header {
 					</div>
 					<div class="header__user_text">
 						<span class="header__user_greetings">Здравствуйте,</span>
-						<span class="header__user_name">Александр Суворов</span>
+						<span class="header__user_name">Иван Сидоров</span>
 					</div>
 				</div>
 			</div>

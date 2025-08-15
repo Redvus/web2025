@@ -1,15 +1,20 @@
+@use 'breakpoints' as bp;
+@use "sass:color";
+@use 'fonts' as *;
+
 .nav {
-	width: calc(100% - ((var(--header-height)) * 2.4));
-	height: calc(100vh - ((var(--header-height) ) * 1.2) - var(--header-height));
+	width: calc(100% - ((var(--header-height)) * 3));
+	min-height: calc(100vh - ((var(--header-height) ) * 1.5) - var(--header-height));
 	position: fixed;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
-	padding: calc((var(--header-height)) * 1.2) calc((var(--header-height)) * 1.2) var(--header-height) calc((var(--header-height)) * 1.2);
+	justify-content: center;
+	padding: calc((var(--header-height)) * 1.5) calc((var(--header-height)) * 1.5) var(--header-height) calc((var(--header-height)) * 1.5);
 	background-color: var(--elementBackground);
 	top: 0;
 	left: 0;
+	text-align: center;
 	// z-index: -1;
 	// visibility: hidden;
 	// transform: translateX(100%);
@@ -24,5 +29,14 @@
 		// display: none;
 		visibility: hidden;
 		// z-index: -1;
+	}
+
+	ul {
+
+		li {
+			font-size: var(--font-size-h3);
+			font-weight: $font-weight-thin;
+			font-stretch: $font-width-extended;
+		}
 	}
 }

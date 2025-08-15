@@ -30,10 +30,16 @@ export class Nav {
 
 		this.nav.innerHTML = `
 			<div class="nav__inside">
-				<ul class="nav__menu">
-					<li class="nav__item"><a href="/about" class="nav__link">О нас</a></li>
-					<li class="nav__item"><a href="/services" class="nav__link">Услуги</a></li>
-					<li class="nav__item"><a href="/contact" class="nav__link">Контакты</a></li>
+				<ul>
+					<li>Учреждение</li>
+					<li>Библиотеки</li>
+					<li>Читателям</li>
+					<li>Услуги</li>
+					<li>Деятельность</li>
+					<li>Краеведение</li>
+					<li>Электронные библиотеки</li>
+					<li>Коллегам</li>
+					<li>Виртуальная библиотека</li>
 				</ul>
 			</div>
 		`;

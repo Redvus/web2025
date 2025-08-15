@@ -53,17 +53,17 @@ export class NewsSingle {
 					e.preventDefault();
 				}
 
-				if (!isOpen) {
-					// this.body.style.pointerEvents = 'none';
-					this.body.style.overflow = '';
-					// this.body.addEventListener('wheel', preventDefault, {passive: false});
-					// this.body.addEventListener('touchmove', preventDefault);
+				// if (!isOpen) {
+				// 	// this.body.style.pointerEvents = 'none';
+				// 	this.body.style.overflow = '';
+				// 	// this.body.addEventListener('wheel', preventDefault, {passive: false});
+				// 	// this.body.addEventListener('touchmove', preventDefault);
 
-				} else {
-					this.body.style.overflow = 'hidden';
-					// this.body.addEventListener('wheel', preventDefault, {passive: false});
-					// this.body.addEventListener('touchmove', preventDefault, {passive: false});
-				}
+				// } else {
+				// 	this.body.style.overflow = 'hidden';
+				// 	// this.body.addEventListener('wheel', preventDefault, {passive: false});
+				// 	// this.body.addEventListener('touchmove', preventDefault, {passive: false});
+				// }
 
 			}
 		});
