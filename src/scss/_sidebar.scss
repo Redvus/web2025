@@ -7,7 +7,7 @@
 	height: calc(100vh - ((var(--header-height)) + var(--header-height) - ((var(--header-height) / var(--headerLogoAmount)))));
 	display: flex;
 	flex-direction: column;
-	background-color: var(--third-darken-5);
+	background-color: var(--headerColor);
 	position: fixed;
 	left: auto;
 	top: 0;
@@ -47,7 +47,7 @@
 
 			i {
 				font-size: var(--font-size-h4);
-				color: var(--primary);
+				color: var(--headerColorIcons);
 				position: relative;
 				margin-bottom: calc(var(--headerLogoPadding) / 3);
 
