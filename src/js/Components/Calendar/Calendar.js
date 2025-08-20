@@ -15,18 +15,14 @@ export class Calendar {
 		this.yearNow = yearNow;
 
 		this.initLayout();
-		if (
-			import.meta.env.DEV ||
-			import.meta.env.PROD // Скрывать для build
+		this.initAppends();
+		// Убрать PROD в финале
+		if (import.meta.env.DEV
+			|| import.meta.env.PROD
 		) {
 			this.initCalendarDev();
-		}
-
-		if (import.meta.env.DEV) {
 			this.initEventDev();
 		}
-
-		this.initAppends();
 
 		this.objectsTabs();
 		new FilterLibrary();
