@@ -52,4 +52,10 @@
 			@include buttonClose(grayBack);
 		}
 	}
+
+	&__calendar {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--layoutBackground);
+	}
 }

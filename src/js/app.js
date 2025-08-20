@@ -10,7 +10,7 @@ import { Header } from './Components/Header.js';
 import { SidebarRight } from './Components/SidebarRight.js';
 import { SidebarLeft } from './Components/SidebarLeft.js';
 import { Footer } from './Components/Footer.js';
-import { Calendar } from './Components/Calendar.js';
+import { Calendar } from './Components/Calendar/Calendar.js';
 import { User } from './Components/User.js';
 import { News } from './Pages/News.js';
 
@@ -22,11 +22,11 @@ class Plugins {
         new SidebarRight();
         new SidebarLeft();
         new Footer();
-        new Calendar();
-        new User();
-
         new Intro();
+
+        new User();
         new News();
+        new Calendar(1);
     }
 }
 

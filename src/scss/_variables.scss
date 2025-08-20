@@ -47,6 +47,13 @@
 
     /*----------  Footer  ----------*/
     --footerHeight: 10vmax;
+
+    /*----------  Calendar  ----------*/
+    --calendarWeekBack: var(--primary);
+    --calendarWeekColor: var(--fourth);
+    --calendarWeekColorActive: var(--fourth-darken-30);
+    --calendarWeekColorShow: var(--primary);
+    --calendarFilterSelectHeight: 3vmax;
 }
 
 @include bp.media-up('XLarge') {

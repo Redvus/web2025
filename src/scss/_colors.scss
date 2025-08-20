@@ -1,7 +1,7 @@
 @use "sass:color";
 
 $colors: (
-	primary  : #830800,
+	primary  : #df4c2c,
 	secondary: #000000,
 	third    : #eeeeee,
 	fourth   : #ffffff,
@@ -15,6 +15,8 @@ $colors: (
 		--#{$name}-darken-8: #{color.adjust($color, $lightness: -8%)};
 		--#{$name}-darken-10: #{color.adjust($color, $lightness: -10%)};
 		--#{$name}-darken-13: #{color.adjust($color, $lightness: -13%)};
+		--#{$name}-darken-20: #{color.adjust($color, $lightness: -20%)};
+		--#{$name}-darken-30: #{color.adjust($color, $lightness: -30%)};
 		--#{$name}-lighten-2: #{color.adjust($color, $lightness: 2%)};
 		--#{$name}-lighten-5: #{color.adjust($color, $lightness: 5%)};
 		--#{$name}-lighten-10: #{color.adjust($color, $lightness: 10%)};
