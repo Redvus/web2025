@@ -9,7 +9,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background-color: var(--third-darken-5);
+	background-color: var(--headerColor);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -110,7 +110,7 @@
 			font-weight: $font-weight-thin;
 			line-height: 1.6vmax;
 			text-transform: uppercase;
-			color: var(--primary);
+			color: var(--headerColorTitle);
 		}
 
 		&--subtext {
@@ -154,18 +154,19 @@
 
 			i {
 				font-size: var(--font-size-h4);
-				color: var(--primary);
+				color: var(--headerColorTitle);
 			}
 		}
 
 		&_now {
 			font-size: var(--font-size-small);
-			color: var(--primary);
+			color: var(--headerColorText);
 			// margin-bottom: calc(var(--marginBase) / 5);
 		}
 
 		&_data {
 			@include hx(h6);
+			color: var(--headerColorTitle);
 			font-weight: $font-weight-thin;
 			text-transform: uppercase;
 		}
@@ -204,7 +205,7 @@
 
 			i {
 				font-size: var(--font-size-h4);
-				color: var(--primary);
+				color: var(--headerColorTitle);
 				margin-top: calc(var(--marginBase) * 0.4);
 			}
 
@@ -231,7 +232,7 @@
 
 			i {
 				font-size: var(--font-size-h4);
-				color: var(--primary);
+				color: var(--headerColorTitle);
 				margin-top: calc(var(--marginBase) * 0.4);
 			}
 
@@ -249,7 +250,7 @@
 
 		&_greetings {
 			font-size: var(--font-size-small);
-			color: var(--primary);
+			color: var(--headerColorText);
 			// margin-bottom: calc(var(--marginBase) / 5);
 		}
 
@@ -257,6 +258,7 @@
 			@include hx(h6);
 			font-weight: $font-weight-thin;
 			text-transform: uppercase;
+			color: var(--headerColorTitle)
 		}
 	}
 

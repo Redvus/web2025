@@ -15,12 +15,12 @@ export class SidebarLeft {
 		this.sidebar = document.createElement('div');
 		this.sidebar.className = 'sidebar sidebar--left';
 		this.sidebar.innerHTML = `
-			<div class="sidebar__icon">
+			<!--<div class="sidebar__icon">
 				<a href="javascript:void(0);" class="sidebar__icon sidebar__icon--text" id="botSidebarButton">
 					<img src="/assets/dev/images/robot.svg" alt="Библио-бот" class="sidebar__icon_image">
 					<span class="sidebar__icon_description">Бот</span>
 				</a>
-			</div>
+			</div>-->
 			<div class="sidebar__icon">
 				<a href="javascript:void(0);" class="sidebar__icon sidebar__icon--text" id="book03SidebarButton">
 					<i class="fas fa-car-on"></i>
@@ -28,12 +28,12 @@ export class SidebarLeft {
 					<span class="sidebar__icon_description">Книга&nbsp;03</span>
 				</a>
 			</div>
-			<div class="sidebar__icon">
+			<!--<div class="sidebar__icon">
 				<a href="javascript:void(0);" class="sidebar__icon sidebar__icon--text" id="botSidebarButton">
 					<img src="/assets/dev/images/pushkinCard.svg" alt="Пушкинская карта" class="sidebar__icon_image">
 					<span class="sidebar__icon_description">Карта</span>
 				</a>
-			</div>
+			</div>-->
 			<div class="sidebar__icon">
 				<a href="javascript:void(0);" class="sidebar__icon sidebar__icon--text" id="serviceSidebarButton">
 					<i class="fas fa-gear"></i>
