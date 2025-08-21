@@ -1,3 +1,5 @@
+import {FilterTerms} from "./FilterTerms.js";
+
 export class FilterLibrary {
 
     constructor() {
@@ -186,6 +188,7 @@ export class FilterLibrary {
         ;
 
         calendarSelectLibrary.addEventListener("change", () => {
+            let daysActiveLib = JSON.parse(localStorage.getItem('daysActiveLib'));
             let daysActiveTerms = JSON.parse(localStorage.getItem('daysActiveTerms'));
 
             for (let i = 0; i < this.filterLibraryOptions.length; i++) {
@@ -216,7 +219,7 @@ export class FilterLibrary {
                                     }, 20)
                                 }
                             }
-                        })
+                        });
                     })
 
                     if (calendarEventSingleDev.length !== null) {
@@ -245,8 +248,8 @@ export class FilterLibrary {
                                 dateLib.style.opacity = '1';
                                 localStorage.setItem('daysActiveLib', JSON.stringify(''));
                             }
-                        })
-                    })
+                        });
+                    });
                 }
             }
         });

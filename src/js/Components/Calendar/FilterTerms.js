@@ -1,21 +1,36 @@
+
+
 export class FilterTerms {
 
     constructor() {
         this.initLayout();
+        this.initTermsSelect();
         this.initFilterTerms();
     }
 
     initLayout() {
-        this.calendarFilter = document.querySelector('.main-content__calendar_filter');
+        this.calendarFilter = document.querySelector('.calendar__filter');
 
         this.filterChoiceTerms = document.createElement('div');
         this.filterChoiceTermsSelect = document.createElement('select');
         this.filterChoiceTermsArrow = document.createElement('div');
 
-        this.filterChoiceTerms.classList = 'main-content__calendar_select';
+        this.filterChoiceTerms.classList = 'calendar__select';
         this.filterChoiceTermsSelect.id = 'calendarSelectTerms';
-        this.filterChoiceTermsArrow.classList = 'fa-solid fa-chevron-down main-content__calendar_arrow';
+        this.filterChoiceTermsArrow.classList = 'fa-solid fa-chevron-down calendar__arrow';
 
+        // Appends
+        this.calendarFilter.appendChild(this.filterChoiceTerms);
+        this.filterChoiceTerms.appendChild(this.filterChoiceTermsSelect);
+        this.filterChoiceTerms.appendChild(this.filterChoiceTermsArrow);
+
+        // Appends
+        this.calendarFilter.appendChild(this.filterChoiceTerms);
+        this.filterChoiceTerms.appendChild(this.filterChoiceTermsSelect);
+        this.filterChoiceTerms.appendChild(this.filterChoiceTermsArrow);
+    }
+
+    initTermsSelect() {
         this.filterOptionsTerms = [
             {
                 text: 'Форма мероприятия',
@@ -80,24 +95,19 @@ export class FilterTerms {
                 new Option(option.text, option.value, option.selected)
             )
         );
-
-        // Appends
-        this.calendarFilter.appendChild(this.filterChoiceTerms);
-        this.filterChoiceTerms.appendChild(this.filterChoiceTermsSelect);
-        this.filterChoiceTerms.appendChild(this.filterChoiceTermsArrow);
     }
 
     initFilterTerms() {
         const
             calendarMonthDates = document.querySelectorAll('.calendar__month_date'),
             calendarSelectTerms = document.getElementById('calendarSelectTerms'),
-            calendarEventSingleDev = document.querySelectorAll('.calendar__events_single')
+            calendarEventSingleDev = document.querySelectorAll('.calendar__events_single'),
+            activeDate = document.querySelectorAll('.cd-active')
         ;
-
-        // console.log(daysActive);
 
         calendarSelectTerms.addEventListener("change", () => {
             let daysActiveLib = JSON.parse(localStorage.getItem('daysActiveLib'));
+            // console.log(daysActiveLib);
 
             for (let i = 0; i < this.filterOptionsTerms.length; i++) {
                 if (calendarSelectTerms.value === this.filterOptionsTerms[i].value) {

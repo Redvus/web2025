@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
+import { FilterLibrary } from "./FilterLibrary.js";
 import {FilterTerms} from "./FilterTerms.js";
-import {FilterLibrary} from "./FilterLibrary.js";
 import {FilterEntrance} from "./FilterEntrance.js";
 import {FilterAge} from "./FilterAge.js";
 
@@ -20,17 +20,17 @@ export class Calendar {
 		if (import.meta.env.DEV
 			|| import.meta.env.PROD
 		) {
-			this.initCalendarDev();
+			// this.initCalendarDev();
 			this.initEventDev();
 		}
 
 		this.objectsTabs();
 		new FilterLibrary();
-		// new FilterTerms();
+		new FilterTerms();
 
-		this.initCalendarAnim();
+		// this.initCalendarAnim();
 
-		// this.initDev();
+		this.initDev();
 	}
 
 	initLayout() {
