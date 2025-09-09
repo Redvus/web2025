@@ -283,8 +283,8 @@ export class Calendar {
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum minima provident quas quisquam quos sit sunt temporibus veritatis voluptate. Culpa cumque deleniti dolorum facere facilis incidunt iste ratione voluptas?</p>
 						<div class="calendar__events_footer">
 							<div class="calendar__events_pass calendar__events_pass--bottom">
-								<span class="calendar__events_tags calendar__events_terms">Выставка</span>
-								<span class="calendar__events_tags calendar__events_entrance">Вход платный</span>
+								<span class="calendar__events_tags calendar__events_entrance">Выставка</span>
+								<span class="calendar__events_tags calendar__events_terms">Вход платный</span>
 							</div>
 						</div>
 					</li>
@@ -300,8 +300,8 @@ export class Calendar {
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum minima provident quas quisquam quos sit sunt temporibus veritatis voluptate. Culpa cumque deleniti dolorum facere facilis incidunt iste ratione voluptas?</p>
 						<div class="calendar__events_footer">
 							<div class="calendar__events_pass calendar__events_pass--bottom">
-								<span class="calendar__events_tags calendar__events_terms">Конференция</span>
-								<span class="calendar__events_tags calendar__events_entrance">Вход свободный</span>
+								<span class="calendar__events_tags calendar__events_entrance">Конференция</span>
+								<span class="calendar__events_tags calendar__events_terms">Вход свободный</span>
 							</div>
 						</div>
 					</li>
@@ -317,8 +317,8 @@ export class Calendar {
 					<li class="calendar__events_single" data-lib="Библиотека №23" data-terms="termsExhibition">
 						<div class="calendar__events_header">
 							<div class="calendar__events_pass">
-								<span class="calendar__events_terms">Библиотека №23</span>
-								<span class="calendar__events_entrance">4 ${this.monthNames[this.monthNow]}</span>
+								<span class="calendar__events_tags calendar__events_terms">Библиотека №23</span>
+								<span class="calendar__events_tags calendar__events_entrance">4 ${this.monthNames[this.monthNow]}</span>
 								<span class="calendar__events_entrance calendar__events_entrance--dark">1${i}:${(i + 5) * 5}</span>
 							</div>
 						</div>
@@ -326,8 +326,8 @@ export class Calendar {
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum minima provident quas quisquam quos sit sunt temporibus veritatis voluptate. Culpa cumque deleniti dolorum facere facilis incidunt iste ratione voluptas?</p>
 						<div class="calendar__events_footer">
 							<div class="calendar__events_pass calendar__events_pass--bottom">
-								<span class="calendar__events_terms">Выставка</span>
-								<span class="calendar__events_entrance">Вход платный</span>
+								<span class="calendar__events_tags calendar__events_terms">Выставка</span>
+								<span class="calendar__events_tags calendar__events_entrance">Вход платный</span>
 							</div>
 						</div>
 					</li>

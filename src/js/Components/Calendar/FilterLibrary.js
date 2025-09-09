@@ -210,13 +210,13 @@ export class FilterLibrary {
                                         dateLib.classList += ' cd-active';
                                         let daysActiveLib = this.filterLibraryOptions[i].value;
                                         localStorage.setItem('daysActiveLib', JSON.stringify(daysActiveLib));
-                                    }, 20)
+                                    }, 20);
                                 } else if (evLib.parentNode.id !== dateLib.getAttribute('data-id')) {
                                     setTimeout(() => {
                                         dateLib.style.opacity = '0.5';
                                         dateLib.style.userSelect = 'none';
                                         dateLib.style.pointerEvents = 'none';
-                                    }, 20)
+                                    }, 20);
                                 }
                             }
                         });
@@ -253,5 +253,13 @@ export class FilterLibrary {
                 }
             }
         });
+
+        const cdActive = document.querySelectorAll('.cd-active');
+        // if (cdActive.length !== 0) {
+            // cdActive.forEach(active => {
+                // active.classList.remove('cd-active');
+                console.log(cdActive);
+            // });
+        // }
     }
 }
