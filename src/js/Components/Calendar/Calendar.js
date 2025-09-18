@@ -16,21 +16,20 @@ export class Calendar {
 
 		this.initLayout();
 		this.initAppends();
-		// Убрать PROD в финале
-		if (import.meta.env.DEV
-			|| import.meta.env.PROD
-		) {
-			// this.initCalendarDev();
+		// Calendar Dev
+		if (import.meta.env.DEV) {
+			// this.initCalendarAnim();
 			this.initEventDev();
+			this.initDev();
+		} else if (import.meta.env.PROD) {
+			this.initEventDev(); // убрать в продакшн
+			this.initCalendarAnim();
+			// this.initDev();
 		}
 
 		this.objectsTabs();
 		new FilterLibrary();
 		new FilterTerms();
-
-		// this.initCalendarAnim();
-
-		this.initDev();
 	}
 
 	initLayout() {
