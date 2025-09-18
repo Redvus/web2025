@@ -16,15 +16,21 @@ export class Calendar {
 
 		this.initLayout();
 		this.initAppends();
+
 		// Calendar Dev
+		// if (import.meta.env.DEV) {
+		// 	// this.initCalendarAnim();
+		// 	this.initEventDev();
+		// 	this.initDev();
+		// } else if (import.meta.env.PROD) {
+		// 	this.initEventDev(); // убрать в продакшн
+		// 	this.initCalendarAnim();
+		// 	// this.initDev();
+		// }
+
 		if (import.meta.env.DEV) {
-			// this.initCalendarAnim();
 			this.initEventDev();
-			this.initDev();
-		} else if (import.meta.env.PROD) {
-			this.initEventDev(); // убрать в продакшн
 			this.initCalendarAnim();
-			// this.initDev();
 		}
 
 		this.objectsTabs();
