@@ -85,7 +85,7 @@ $font-width-extended: 125%;
 
 // Base fonts styles
 @mixin px($size: base) {
-	font-family: var(--primary-font);
+	font-family: var(--primary-font), serif;
 	font-weight: $font-weight-regular;
 	font-stretch: $font-width-normal;
 	line-height: var(--body-line-height);
