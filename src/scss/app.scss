@@ -1,13 +1,16 @@
-@import "../../node_modules/bourbon/core/bourbon";
-@import "../../node_modules/sag-bourbon-neat/core/neat";
-//@import "bitters/base";
 
-@import "media";
-@import "colors";
-@import "fonts";
-@import "variables";
+// New format in Dart SCSS
+@use 'breakpoints';
+@use 'colors';
+@use "fonts";
+@use "variables";
+@use "buttons";
 
-@import "layout";
-@import "sidebar";
-@import "header";
-@import "footer";
+@use "sidebar";
+@use "header";
+@use "nav";
+@use "footer";
+@use "layout";
+@use "calendar";
+@use "user";
+@use "modal";

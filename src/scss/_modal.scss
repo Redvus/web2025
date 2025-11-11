@@ -1,0 +1,61 @@
+@use 'breakpoints' as bp;
+@use "sass:color";
+@use 'fonts' as *;
+@use 'buttons' as *;
+
+.modal {
+	width: calc(100% - ((var(--header-height)) * 3));
+	min-height: calc(100vh - ((var(--header-height) ) * 1.5) - var(--header-height));
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	padding: calc((var(--header-height)) * 1.5) calc((var(--header-height)) * 1.5) var(--header-height) calc((var(--header-height)) * 1.5);
+	background-color: var(--elementBackground);
+	top: 0;
+	left: 0;
+	// z-index: -1;
+	// visibility: hidden;
+	// transform: translateX(100%);
+	overflow: auto;
+
+	&__news {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--layoutBackground);
+
+		&_title {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			text-align: left;
+			font-weight: $font-weight-thin;
+			font-stretch: $font-width-extended;
+		}
+
+		&_block {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&_single {
+			position: fixed;
+			z-index: 1500;
+
+			&_close {
+				@include buttonClose();
+			}
+		}
+
+		&_close {
+			@include buttonClose(grayBack);
+		}
+	}
+
+	&__calendar {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--layoutBackground);
+	}
+}
